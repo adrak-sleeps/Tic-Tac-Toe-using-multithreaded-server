@@ -26,9 +26,19 @@ where 88.88.88.88 is the local host's IP address and 8989 is the port we've allo
 
 ## Internal Working of the Project alongwith the Additional Task
 
+Alongwith implementing a multithread server, I customised it as a tic-tac-toe game, which can be hosted by a server and played by clients in its LAN.
+
 Starting with the server, I have initialised the number of players as 0, and defined a mutex lock which will be used to lock critical sections of the code. Utility functions to facilitate the tic-tac-toe game have been defined. A queue is used to maintain the clients lined up to play the game. Using a thread function, we allot a thread (from the threa pool of 20 threads) two of the available clients and the game takes place between them. Multiple games can take place simultaneously. After a limit of 50 players, the server closes.
 
 For the client, I have defined the utility functions which will help the client connect with the server and receive messages, and play their moves according to the opponent player. The client is informed about the state of the game grid after every move, and the final result is also shown. After this, the client disconnects from the server.
+
+Screenshot of a server terminal after a match is over:
+
+![2022-06-19 (11)](https://user-images.githubusercontent.com/76224935/174478858-f43e1764-3abb-45e3-8060-9042165ce25f.png)
+
+Screenshot of the two clients after a match is over:
+
+![2022-06-19 (12)](https://user-images.githubusercontent.com/76224935/174478882-82a7665b-cbdd-46bd-94b2-d5e6b669d8d9.png)
 
 ## My learnings from the Project
 
@@ -40,7 +50,7 @@ So overall, it was a very interesting project to work on, and I look forward to 
 
 ## Demo of the Project
 
-Uploading project-demo.mp4…
+https://user-images.githubusercontent.com/76224935/174478684-ad21beb1-d941-48f1-bfb0-23d3d64c0230.mp4
 
 ## Resources used:
 
