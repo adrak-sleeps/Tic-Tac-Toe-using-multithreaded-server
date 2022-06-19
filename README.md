@@ -20,7 +20,9 @@ Open two new terminals, compile and run "client.cpp" on both of them as:
 
 >`g++ -o client client.cpp`
 
->`./client`
+>`./client 88.88.88.88 8989`
+
+where 88.88.88.88 is the local host's IP address and 8989 is the port we've alloted to the server.
 
 ## Internal Working of the Project alongwith the Additional Task
 
