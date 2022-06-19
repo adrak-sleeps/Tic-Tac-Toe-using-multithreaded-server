@@ -40,6 +40,8 @@ So overall, it was a very interesting project to work on, and I look forward to 
 
 ## Demo of the Project
 
+Uploading project-demo.mp4…
+
 ## Resources used:
 
 During the implementation of this project, I referred to the following resources:
