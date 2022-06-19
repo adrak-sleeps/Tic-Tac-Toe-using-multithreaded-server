@@ -224,7 +224,7 @@ int check_grid(char grid[][3], int move){
             return 1;
         }
 
-        else if(((move==2)||(move==4)||(move==8)) && (grid[0][2]==grid[1][1] && grid[1][1]==grid[2][0])){
+        else if(((move==2)||(move==4)||(move==6)) && (grid[0][2]==grid[1][1] && grid[1][1]==grid[2][0])){
             printf("Win by leading diagonal\n");
             return 1;
         }
