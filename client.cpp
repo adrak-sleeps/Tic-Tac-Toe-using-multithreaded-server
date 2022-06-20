@@ -159,6 +159,7 @@ void game(int sock, int id)
 
         receive_msg(sock, msg);
 
+        //Comparing the received message and taking corresponding action
         if (!strcmp(msg, "TRN")) { 
 	        printf("Your turn:\n");
 	        make_move(sock);
@@ -196,18 +197,26 @@ void game(int sock, int id)
 }
 
 int main(int argc, char *argv[])
-{
-      if(argc<3){
-       error("Enter valid host!");
-       exit(0);
+{   
+    //If less than 3 arguments are received, it means a valid host number has not been provided.
+    if(argc<3){
+    error("Enter valid host!");
+    exit(0);
     }
 
+    //Sock is connected to the server
+    //First parameter is the host's address and second parameter is the port number
     int sock = connect_to_server(argv[1], atoi(argv[2]));
+
+    //Receive id from server
+    //If client is the first player, id is 0; else id is 1.
     int id = receive_int(sock); 
 
     game(sock,id);
     
     printf("Game over.\n");
+
+    //CLosing the socket after match is over.
     close(sock);
     return 0;
 }
